@@ -70,6 +70,96 @@ php artisan queue:work
 http://localhost:8000/api/v1
 ```
 
+## Authentication Routes
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| POST | `/auth/login` | AuthController@login |
+| POST | `/auth/logout` | AuthController@logout |
+| POST | `/auth/refresh` | AuthController@refresh |
+| GET | `/auth/user` | AuthController@user |
+| POST | `/auth/password/forgot` | AuthController@forgotPassword |
+| POST | `/auth/password/reset` | AuthController@resetPassword |
+
+---
+
+## Customer Management
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| GET | `/customers` | CustomerController@index |
+| POST | `/customers` | CustomerController@store |
+| GET | `/customers/map-data` | CustomerController@mapData |
+| GET | `/customers/{id}` | CustomerController@show |
+| PUT | `/customers/{id}` | CustomerController@update |
+| DELETE | `/customers/{id}` | CustomerController@destroy |
+| GET | `/customers/{id}/credit-status` | CustomerController@creditStatus |
+| GET | `/customers/{id}/orders` | CustomerController@orders |
+
+---
+
+## Dashboard & Analytics
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| GET | `/dashboard/summary` | DashboardController@summary |
+| GET | `/dashboard/inventory-status` | DashboardController@inventoryStatus |
+| GET | `/dashboard/sales-performance` | DashboardController@salesPerformance |
+| GET | `/dashboard/top-products` | DashboardController@topProducts |
+
+---
+
+## Products & Inventory
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| GET | `/products` | ProductController@index |
+| POST | `/products` | ProductController@store |
+| GET | `/products/low-stock` | ProductController@lowStock |
+| GET | `/products/{id}` | ProductController@show |
+| PUT | `/products/{id}` | ProductController@update |
+| DELETE | `/products/{id}` | ProductController@destroy |
+| GET | `/products/{id}/stock` | ProductController@stock |
+| POST | `/products/{id}/reserve` | ProductController@reserve |
+| POST | `/products/{id}/release` | ProductController@release |
+
+---
+
+## Orders
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| GET | `/orders` | OrderController@index |
+| POST | `/orders` | OrderController@store |
+| POST | `/orders/calculate-total` | OrderController@calculateTotal |
+| GET | `/orders/{id}` | OrderController@show |
+| GET | `/orders/{id}/invoice` | OrderController@invoice |
+| PUT | `/orders/{id}/status` | OrderController@updateStatus |
+
+---
+
+## Warehouses & Stock Transfers
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| GET | `/warehouses` | WarehouseController@index |
+| GET | `/warehouses/{id}/inventory` | WarehouseController@inventory |
+| GET | `/stock-transfers` | WarehouseController@transferHistory |
+| POST | `/stock-transfers` | WarehouseController@storeTransfer |
+
+---
+
+## Notifications
+
+| Method | Endpoint | Controller |
+|------|---------|------------|
+| GET | `/notifications` | NotificationController@index |
+| GET | `/notifications/unread-count` | NotificationController@unreadCount |
+| PUT | `/notifications/read-all` | NotificationController@markAllAsRead |
+| PUT | `/notifications/{id}/read` | NotificationController@markAsRead |
+| DELETE | `/notifications/{id}` | NotificationController@destroy |
+
+---
 ### Authorization Header
 ```
 Authorization: Bearer <token>

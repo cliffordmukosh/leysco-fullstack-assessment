@@ -24,7 +24,6 @@ This repository is structured as a monorepo, with each project containing its ow
 ## System Architecture
 
 Frontend (Vue 3)
-- Communicates via REST API (JSON)
 
 Backend (Laravel API)
 - Authentication & Authorization
@@ -95,20 +94,6 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
----
-
-## Purpose
-
-This repository demonstrates:
-
-- Fullstack system design
-- Clean separation of frontend and backend
-- Production-ready Laravel API architecture
-- Modern Vue.js frontend architecture
-- Professional documentation standards
-
-Prepared for Leysco Frontend & Backend Technical Assessments.
 
 ---
 

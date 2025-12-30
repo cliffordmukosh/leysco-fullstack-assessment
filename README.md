@@ -12,17 +12,12 @@ This repository is structured as a monorepo, with each project containing its ow
 
 ## Repository Structure
 
-```
-leysco/
-│
-├── l-salespro-api-backend/
-│   └── README.md
-│
-├── l-salesview-mini/
-│   └── README.md
-│
-└── README.md
-```
+- **leysco/**
+  - **l-salespro-api-backend/**
+    - [Backend README](./l-salespro-api-backend/README.md)
+  - **l-salesview-mini/**
+    - [Frontend README](./l-salesview-mini/README.md)
+  - [Root README](./README.md)
 
 ---
 

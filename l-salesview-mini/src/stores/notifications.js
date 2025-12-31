@@ -11,25 +11,25 @@ export const useNotificationsStore = defineStore('notifications', {
 
   actions: {
     addNotification(type, message, autoDismiss = true) {
-      const id = Date.now()
+      const id = Date.now();
       const notification = {
         id,
-        type, 
+        type,
         message,
         read: false,
-        timestamp: new Date().toISOString()
-      }
+        timestamp: new Date().toISOString(),
+      };
 
-      this.notifications.unshift(notification)
+      this.notifications.unshift(notification);
 
-      // Auto dismiss after 2 seconds
+      // Auto dismiss after 7 seconds
       if (autoDismiss) {
         setTimeout(() => {
-          this.removeNotification(id)
-        }, 2000)
+          this.removeNotification(id);
+        }, 7000);
       }
 
-      this.saveToStorage()
+      this.saveToStorage();
     },
 
     removeNotification(id) {

@@ -1,3 +1,9 @@
+/*** @component: L-NotificationToast
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Reusable toast for notifications
+ */
+
 <template>
   <!-- Notification toast -->
   <div
@@ -17,10 +23,6 @@
 </template>
 
 <script setup>
-/*** @component: L-NotificationToast
- * @description: Reusable toast for notifications
- */
-
 defineProps({
   type: String,
   message: String

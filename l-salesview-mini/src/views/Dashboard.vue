@@ -1,3 +1,9 @@
+/*** @component: L-Dashboard
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Main dashboard overview displaying key metrics cards (total sales, orders, low stock, customers), time period toggle (today/week/month), sales performance line chart, inventory by category doughnut chart, and top 5 selling products horizontal bar chart using Chart.js.
+ */
+ 
 <template>
   <LDefaultLayout>
     <template #breadcrumb>Dashboard</template>

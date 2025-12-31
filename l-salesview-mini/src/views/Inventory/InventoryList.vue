@@ -1,3 +1,9 @@
+/*** @component: L-InventoryList
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Main inventory listing page with quick search, sortable table (SKU, name, total/available stock), status indicators (OK/Low/Critical), pagination, and clickable rows to product detail view.
+ */
+ 
 <template>
   <LDefaultLayout>
     <template #breadcrumb>Inventory</template>

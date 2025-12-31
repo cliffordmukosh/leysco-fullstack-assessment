@@ -1,3 +1,9 @@
+/*** @component: L-Input
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Reusable input component with label, placeholder, error display, and two-way binding support.
+ */
+
 <template>
   <div class="mb-4">
     <label v-if="label" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{{ label }}</label>

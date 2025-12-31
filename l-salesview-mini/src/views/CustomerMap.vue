@@ -1,4 +1,10 @@
-<template>
+/*** @component: L-CustomerMap
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Interactive customer map view using Leaflet.js displaying customer locations from mock data with markers, rich popups (name, contact, address), and clickable sidebar list for quick navigation and marker focus.
+ */
+ 
+ <template>
   <LDefaultLayout>
     <template #breadcrumb>Customer Map</template>
 

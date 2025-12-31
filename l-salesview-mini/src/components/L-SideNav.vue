@@ -1,5 +1,11 @@
+/*** @component: L-SideNav
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Collapsible side navigation with proper router-link navigation
+ */
+
 <template>
-  <aside 
+  <aside
     :class="[
       'fixed inset-y-0 left-0 bg-white dark:bg-gray-800 shadow-lg border-r border-gray-200 dark:border-gray-700 transition-all duration-300 z-40 pt-16',
       collapsed ? 'w-20' : 'w-64'
@@ -7,8 +13,8 @@
   >
     <!-- Collapse Toggle -->
     <div class="absolute top-20 -right-3">
-      <button 
-        @click="collapsed = !collapsed"
+      <button
+        @click="uiStore.toggleSidebar"
         class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-full p-2 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition"
       >
         <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,14 +51,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { useUiStore } from '@/stores/ui'
 
-/*** @component: L-SideNav
- * @description: Collapsible side navigation with proper router-link navigation
- */
-
-const collapsed = ref(false)
+const uiStore = useUiStore()
+const collapsed = computed(() => uiStore.sidebarCollapsed)
 const route = useRoute()
 
 const menuItems = [

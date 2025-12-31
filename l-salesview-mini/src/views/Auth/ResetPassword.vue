@@ -1,3 +1,9 @@
+/*** @component: L-ResetPassword
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Password reset request page with username and email input, simulated submission, success confirmation state, and back to login navigation.
+ */
+
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
     <div class="w-full max-w-sm">

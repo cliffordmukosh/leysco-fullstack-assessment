@@ -1,3 +1,9 @@
+/*** @component: L-Button
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Reusable button component with support for loading states, disabling, and different variants.
+ */
+
 <template>
   <button
     :type="type"

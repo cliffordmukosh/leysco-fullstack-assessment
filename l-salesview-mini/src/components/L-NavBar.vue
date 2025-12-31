@@ -1,3 +1,9 @@
+/*** @component: L-NavBar
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Top navigation bar component featuring company branding, theme toggle, notification center with unread count, and user profile dropdown with logout functionality.
+ */
+
 <template>
   <nav class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

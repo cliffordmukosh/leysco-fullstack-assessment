@@ -1,3 +1,9 @@
+/*** @component: L-ProductDetail
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Detailed product view showing image carousel (placeholder), stock summary, warehouse breakdown table, specifications, batch/serial tracking status, and related products grid with navigation.
+ */
+ 
 <template>
   <LDefaultLayout>
     <template #breadcrumb>

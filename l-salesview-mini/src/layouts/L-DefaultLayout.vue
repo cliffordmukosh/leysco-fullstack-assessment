@@ -1,3 +1,9 @@
+/*** @component: L-Layout
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Main application layout with responsive sidebar and dynamic main content padding when sidebar collapses.
+ */
+
 <template>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900 text-xs md:text-sm">
     <!-- Top Navbar -->
@@ -6,8 +12,13 @@
     <!-- Sidebar -->
     <LSideNav />
 
-    <!-- Main Content -->
-    <main class="lg:pl-64 pt-16 transition-all duration-300">
+    <!-- Main Content-->
+    <main
+      :class="[
+        'pt-16 transition-all duration-300',
+        uiStore.sidebarCollapsed ? 'lg:pl-20' : 'lg:pl-64'
+      ]"
+    >
       <div class="p-4 sm:p-6 lg:p-8">
         <!-- Breadcrumb -->
         <nav class="flex mb-6" aria-label="Breadcrumb">
@@ -38,6 +49,9 @@
 </template>
 
 <script setup>
+import { useUiStore } from '@/stores/ui'
 import LNavBar from '@/components/L-NavBar.vue'
 import LSideNav from '@/components/L-SideNav.vue'
+
+const uiStore = useUiStore()
 </script>

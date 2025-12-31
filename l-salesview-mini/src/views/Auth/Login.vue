@@ -1,3 +1,9 @@
+/*** @component: L-Login
+ * @created-date: 30-12-2025
+ * @leysco-version: 1.0.0
+ * @description: Centered login page with form validation, password visibility toggle, remember me functionality, forgot password link, and loading/error states.
+ */
+
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
     <div class="w-full max-w-sm">
